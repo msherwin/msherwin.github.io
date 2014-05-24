@@ -19,6 +19,8 @@ header{
 } 
 
 body{
+  font-family:'Arvo',serif;
+  font-size: 1em;
   padding: 50px;
   border: 2px solid #0099CC;
 }

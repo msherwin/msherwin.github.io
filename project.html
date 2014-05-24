@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.css" />
+		<link rel="stylesheet" href="bootstrap-3.1.1/css/boostrap-theme.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	
+		<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+		<!--[if lt IE 9]> <script src="js/respond.min.js"></script> <![endif]-->
+		
+		<title>Mike's Home Page</title>
+	</head>
+	
+	<body>
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html">Mike's Homepage</a>
+			</div>
+			<div class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="#">Project</a>
+				<li><a href="thingslike.html">Things I Like</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</div> 
+		
+		<div class="container">
+		   <div class="blog-post">
+			<h1 class="blog-post-title">A NEAT Game Project</h1>
+			<p class="blog-post-meta">my senior project as a Computer Science Major</p>
+			<h3>Video games...video games never change</h3>
+			<p>Video games sure have changed since I was a kid. Over the course of my life, I've seen video games go from sprites, to 3D models, to photorealism, and . . . back to sprites. The low-fi movement has been predominantly indie in origin, but the retro trend is still going strong. Why is that? Is it simple nostalgia for the pixels of yore, or is it a suggestion of potential beyond pretty looks?</p>
+			<p>Some retro games are clearly motivated by the former. Take <a href="http://www.cavestory.org/game-info/about-cave-story.php">Cave Story</a> for instance: Cave Story doesn't do anything new. Rather, it excels at doing something old. Anyone who has played platformers on a Nintendo (or some other console whose merit I could not possibly vouch for) immediately understands how to play the game. Although no doubt born in part from the necessity of working on a one-man team, the retro graphics of Cave Story also serve as an implicit instruction manual. "How to play Cave Story, step 1: you know how to play Cave Story. Step 2: see step 1."</p>
+			<div class="inline-img">
+			   <img src="image/Cave_Story_gameplay.gif" width="250" height="200"></img>
+			</div>
+			<h3>Video games have changed</h3>
+			<p>Not all the members of the retro resurrection run on pure nostalgia, however; <a href="https://minecraft.net/game">Minecraft</a>, arguably the game that started the whole retro kick, is quite a different kind of beast. Minecraft took the systems resources freed by its graphical modesty and leveraged them towards the goal of creating emergent gameplay like nothing ever seen before. In Minecraft, players explore a dynamically generated world and interact with it using a set of tools so powerful that you can <a href="https://www.youtube.com/watch?v=20HQOwDCbWs">literally build a working computer</a> and play a video game on it, <i>within the game you are already playing</i>!.</p>
+			<p>The idea that the vast computational power of modern computers can be leveraged towards some other purpose than graphics is central to my project. We can make games more complex and smarter as well as prettier, although whether anyone actually wants that is an open question.<a href="http://askagamedev.tumblr.com/post/76972636953/game-development-myths-players-want-smart-artificial">Some research</a>indicates that the answer is no, that players feel like the computer is cheating if it's <i>too</i> good. A little thought reveals this as a foregone conclusion, however; no one enjoys being beaten into the ground by an opponent that they recongize is vastly superior. Even human opponents who are too skilled are inevitably found guilty of teh h4X. What if it didn't start that way, though? What if your computer opponent began its life as guiless as a noob, and you could actually <i>see</i> its growth? How could you complain when you are given the opportunity to grow along with it?
+			<h3>The evolution of A.I.</h3>
+			<p>Computers can't learn, they're just machines, you say. True artificial intelligence is still decades, if not centuries away, you say. How can you claim the ability to create a game that can learn from a human player, I tell you to ask.</p>
+			<p><em><strike>Two</strike> Three words: neural networks and evolution.</em></p>
+			<p>First things first: what is a neural network? In layman's terms, a neural network is an abstract system of fiddly bits which is roughly analagous to a biological brain. A neural network consists of one layer of input neurons, one layer of output neurons, and sometimes one or more "hidden" layers in between.</p>
+			<div class="inline-img">
+			   <img src="image/neural_net.png" width="250" height="250"></img>
+			</div>
+			<p>Neural networks have <a href="http://en.wikipedia.org/wiki/Artificial_neural_network#History">been around for quite a while</a> and excel at some applications, such as visual and auditory pattern recognition, but have remained relatively niche for two reasons: first, the amount of memory and CPU time required to run a network large enough to be useful has been prohibitive until recently, and second, there hasn't been much theoretical work done on how a network can be structured for a specific problem. This is where evolution comes in. If you're going to model a biological structure, why not use the same design procedure that biology uses?</p>
+			<p>Enter <em>genetic algorithms</em>. A genetic algorithm encodes the solution to a problem in a bit-string (in the simplest case). The first generation of candidate solutions is completely random; if we were talking about chickens, they would be just as likely to lay their own livers as they would eggs. Each solution is run through a fitness function that gives a numerical score to a candidate solution's ability to solve the problem, and the fittest members of each generation go on to "reproduce" by swapping bit segments and undergoing other random mutations. The idea is that each generation solves the problem slightly better than the previous one, at least within the programmers ability to define the problem via the fitness function.</p>
+			<p>The algorithm that I plan to use for my project, the aptly titled NEAT (NeuroEvolution of Augmented Topologies) algorithm, combines both of these methods. Neural network structures, or topologies, are generated through evolutionary means, moving the onus of design from the programmer to natural selection. NEAT is a specific implementation of evolved neural networks in which the initial population is minimal, consisting of just an input and an output layer. By proceeding in this fashion, NEAT arrives at networks that are not only optimal but also minimally computationally intensive to run. There is far more to NEAT than what I have described; for a more technical description, you can read my <a href="extendedabstract.html">extended abstract</a> or better yet, <a href="http://nn.cs.utexas.edu/keyword?stanley:phd04">Kenneth O. Stanley's original thesis</a>, which provides not only the technical details of NEAT but also an excellent overview of the neural network and genetic algorithm fields in general.</p>
+			<h3>So what's your project already?!</h3>
+			<p>Well, it's complicated. And by complicated, I mean organizationally challenged. It will certainly be a game, and it will certainly be playable. I grew up on 2D platformers, so right now that's the plan. The player and computer will have equal abilities: movement, jumping, dashing, attacking, and guarding. As I've so far imagined it, it will be an endless series of duels between the human and the computer, with the computer's strategy becoming more and more sophisticated as time goes on.</p>
+			<p>I want to avoid computer opponents who just endlessly spam the attack button, so there will be more than one type of attack and costs/benefits associated with different responses; for example, using a quick attack against a guarding opponent will leave you temporarily immobilized, and likewise when guarding against a heavy attack. The genre and gameplay mechanics are subject to change if either one does not exhibit enough nuance to produce interesting behavior from the NEAT algorithm, however.</p>
+			<h3>The Plan</h3>
+			<p>This list, like everything else, is provisional, but the tools I plan to use are:
+			<ul>
+			   <li>C# language for its support with:</li>
+			   <li>  Microsoft's XNA game development framework</li>
+			   <li>  the Monogame framework</li>
+			   <li>  and SharpNEAT, an implementation of the NEAT algorithm in C#</li>
+			</ul>
+			<p>I plan on devoting my summer to this project and doing data analysis in the fall. I will be keeping a log of what I do and learn on this website, so check up every now and then if you're interested!</p>
+		 </div><!-- /.blog-post -->
+
+		</div> <!-- /container -->
+
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="bootstrap-3.1.1/js/bootstrap.min.js"></script>
+	</body>
+
+</html>
+

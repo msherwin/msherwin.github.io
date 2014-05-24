@@ -18,6 +18,54 @@ header{
   display: block; 
 } 
 
+body{
+  padding: 50px;
+  border: 2px solid #0099CC;
+}
+
+.navbar{
+  background-color: #00CCFF;
+  color: #0000FF;
+  font-weight: bold;
+}
+
+.navbar .navbar-nav .active > a:nth-child(1){
+    background-color: #80E6FF;
+}
+.navbar .navbar-nav > .dropdown .dropdown-menu{
+    background-color: #CCF5FF;
+}
+
+body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li.dropdown > a{
+    background-color: #00CCFF;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-toggle{
+    background-color: #80E6FF;
+}
+.navbar .navbar-nav .active{
+    background-color: #CCF5FF;
+}
+body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li.dropdown.open > a{
+    background-color: #00CCFF;
+}
+
+.inline-img{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.blog-block, .blog-text{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+body > div.container > div > p.blog-post-meta{
+    color:#A9A9BE;
+}
+
 section{ 
   border: 1px solid #3322FF; 
   background-color: #FFFF66;
